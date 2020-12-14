@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Speech Recognition</title>
+</head>
+<body>
+    <div class="jumbotron p-3">
+        <div class="well text-center">
+    
+            <h1>Speech Recognition</h1><br>
+            <p>
+                Just upload any audio file to convert it into text with one click !
+            </p>
+    
+        </div>
+    </div>
+
+    <div class="container">
+    <div id="SpeechContainer">
+        <h1>Upload an audio file</h1><br>
+        <form action="" method="post" enctype="multipart/form-data" >
+            <input class="btn-block btn-default"  type="file" name="file"></input>
+            <br>
+            <input type="submit" value="Transcribe" class="btn btn-primary">
+
+        </form>
+
+    </div><br>
+
+    {% if transcript != "" %}
+
+    <div class="col-md-8" id="SpeechTranscriptContainer">
+        <h1>Transcript</h1><br>
+        <p> {{transcript}} </p>
+    </div>
+
+    {% endif %}
+    </div>
+    <footer class="py-4 jumbotron footer" style="color:black; margin-bottom: 0px; position: absolute; right: 0; bottom: 0; left: 0 ">
+        <div class="container text-center">
+             <a href="https://www.linkedin.com/in/mousam-gangrade/" style="color:black; text-decoration: none;"><b>&#169; </b>Mousam Gangrade</a>
+        </div>
+    </footer>
+</body>
+</html>
